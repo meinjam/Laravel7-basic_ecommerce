@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontendController@index')->name('homepage');
+Route::get('/product/{id}', 'FrontendController@show')->name('product.show');
 
 Auth::routes();
 
